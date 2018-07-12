@@ -120,7 +120,13 @@ public class RegistrationPage {
 		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "email")), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddygmail@gmail.com");
 	
-	
+		Actions.EnterText(phoneNumber, "70346048123456");
+		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "contact_no")), "This value is not valid error message displayed for phone");
+		Actions.EnterText(phoneNumber, "123456");
+		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "contact_no")), "This value is not valid error message displayed for phone");
+		Actions.EnterText(phoneNumber, "70346048sd");
+		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "contact_no")), "This value is not valid error message displayed for phone");
+		
 	}
 	
 	public void registerUser(String firstname, String lastname, String department, String username, String passowrd, String confirmPassowrd, String emailID, String phonenumber){
