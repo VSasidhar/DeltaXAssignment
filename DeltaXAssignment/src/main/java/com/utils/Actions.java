@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.asserts.SoftAssert;
@@ -16,7 +17,7 @@ import org.testng.asserts.SoftAssert;
 	public class Actions{
 		 private static  Properties prop =new Properties();
 			private static WebDriver driver =WebdriverFactory.getWebDriver();
-			static SoftAssert softAssert = new SoftAssert();
+			public static final SoftAssert softAssert = new SoftAssert();
 		
 		
 	 
@@ -59,8 +60,10 @@ import org.testng.asserts.SoftAssert;
 	             
 				webElement = driver.findElement(locator.Locator);
 			} catch (org.openqa.selenium.NoSuchElementException ex) {
-				// Handle exception if the element is not found			
-				ActionLog("NoSuchElementException: The Object " + locator.locatorDescription + " not found! " + ex.getMessage());
+				// Handle exception if the element is not found		
+				
+				softAssert.fail("NoSuchElementException: The Object " + locator.locatorDescription + " not found! " + ex.getMessage());
+				
 			} 
 			return webElement;
 	}
@@ -84,20 +87,11 @@ import org.testng.asserts.SoftAssert;
 	
 	}
 		
-		public static void  ActionLog(String message){
-			
-			
-		}
 		
 		public static void  Assertrue(boolean condition, String message){
 			softAssert.assertTrue(condition, message); 
 		}
 		
-		@AfterTest
 		
-		public static void tearDown(){
-			softAssert.assertAll();
-			WebdriverFactory.closeWebDriver();
-		}
 		
 }

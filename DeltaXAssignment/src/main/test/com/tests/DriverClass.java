@@ -2,6 +2,10 @@ package com.tests;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -13,13 +17,13 @@ import com.utils.ExcelReader;
 import com.utils.WebdriverFactory;
 
 public class DriverClass{
-	RegistrationPage registr = new RegistrationPage();
+	RegistrationPage registr;
 	 static WebDriver driver;
 	@Parameters({"browserName"})
 	@BeforeTest
 	public void testInit(String browserName) throws InterruptedException{
 		driver= WebdriverFactory.intialiseWebDriver(browserName);
-		
+		 registr = PageFactory.initElements(driver, RegistrationPage.class);
 	}
 	
 	@DataProvider(name="iterator")
@@ -47,6 +51,11 @@ public class DriverClass{
 		registr.registerUser(firstName, lastName, department, userName, passowrd, confirmPassowrd, email, phoneNumber);
 	}
 	
+	@AfterSuite(alwaysRun=true)
 	
+	public static void tearDown(){
+		Actions.softAssert.assertAll();
+		WebdriverFactory.closeWebDriver();
+	}
 
 }

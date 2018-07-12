@@ -11,6 +11,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterSuite;
 
 public class WebdriverFactory {
 	
@@ -67,6 +68,7 @@ static DesiredCapabilities capabilities = new DesiredCapabilities();
 	}
 	
 	public static void closeWebDriver(){
+		driver.quit();
 		driver.close();
 	}
 }
