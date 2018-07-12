@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="DeltaXAssignment" duration-ms="46797" started-at="2018-07-12T13:59:51Z" finished-at="2018-07-12T14:00:38Z">
+  <suite name="DeltaXAssignment" duration-ms="36533" started-at="2018-07-12T14:39:41Z" finished-at="2018-07-12T14:40:17Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="46797" started-at="2018-07-12T13:59:51Z" finished-at="2018-07-12T14:00:38Z">
+    <test name="Test" duration-ms="36533" started-at="2018-07-12T14:39:41Z" finished-at="2018-07-12T14:40:17Z">
       <class name="com.tests.DriverClass">
-        <test-method status="PASS" signature="testInit(java.lang.String)[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="testInit" is-config="true" duration-ms="4162" started-at="2018-07-12T13:59:51Z" finished-at="2018-07-12T13:59:56Z">
+        <test-method status="PASS" signature="testInit(java.lang.String)[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="testInit" is-config="true" duration-ms="4465" started-at="2018-07-12T14:39:41Z" finished-at="2018-07-12T14:39:45Z">
           <params>
             <param index="0">
               <value>
@@ -18,31 +18,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="NaivateToUrl()[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="NaivateToUrl" is-config="true" duration-ms="862" started-at="2018-07-12T13:59:56Z" finished-at="2018-07-12T13:59:56Z">
+        <test-method status="PASS" signature="NaivateToUrl()[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="NaivateToUrl" is-config="true" duration-ms="1078" started-at="2018-07-12T14:39:45Z" finished-at="2018-07-12T14:39:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NaivateToUrl -->
-        <test-method status="FAIL" signature="NegativeScenarios()[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="NegativeScenarios" duration-ms="36929" started-at="2018-07-12T13:59:56Z" finished-at="2018-07-12T14:00:33Z">
+        <test-method status="FAIL" signature="NegativeScenarios()[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="NegativeScenarios" duration-ms="26768" started-at="2018-07-12T14:39:46Z" finished-at="2018-07-12T14:40:13Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Timed out after 30 seconds waiting for element to be clickable: By.xpath: //small[@data-bv-validator-for='confirm_password' and normalize-space(.)='This value is not valid']
+              <![CDATA[Timed out after 20 seconds waiting for element to be clickable: By.xpath: //small[@data-bv-validator-for='confirm_password' and normalize-space(.)='This value is not valid']
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'INPCD0244', ip: '10.24.132.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\XSVUND~1\AppData\Local\Temp\scoped_dir25360_30630}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 4b20c26b29a751de74d669ae228537f4]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\XSVUND~1\AppData\Local\Temp\scoped_dir49680_28526}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e53572d7f0fc97aeb2621d3752c8ffdc]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.xpath: //small[@data-bv-validator-for='confirm_password' and normalize-space(.)='This value is not valid']
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: By.xpath: //small[@data-bv-validator-for='confirm_password' and normalize-space(.)='This value is not valid']
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'INPCD0244', ip: '10.24.132.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\XSVUND~1\AppData\Local\Temp\scoped_dir25360_30630}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 4b20c26b29a751de74d669ae228537f4
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\XSVUND~1\AppData\Local\Temp\scoped_dir49680_28526}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e53572d7f0fc97aeb2621d3752c8ffdc
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
-at com.utils.Actions.WaitForWebElement(Actions.java:86)
-at com.utils.Actions.FindElement(Actions.java:57)
+at com.utils.Actions.WaitForWebElement(Actions.java:81)
+at com.utils.Actions.FindElement(Actions.java:55)
 at com.pages.RegistrationPage.VerifyErrorFieldValidation(RegistrationPage.java:111)
 at com.tests.DriverClass.NegativeScenarios(DriverClass.java:44)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -76,11 +76,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NegativeScenarios -->
-        <test-method status="PASS" signature="NaivateToUrl()[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="NaivateToUrl" is-config="true" duration-ms="198" started-at="2018-07-12T14:00:34Z" finished-at="2018-07-12T14:00:34Z">
+        <test-method status="PASS" signature="NaivateToUrl()[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="NaivateToUrl" is-config="true" duration-ms="143" started-at="2018-07-12T14:40:14Z" finished-at="2018-07-12T14:40:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NaivateToUrl -->
-        <test-method status="PASS" signature="PositiveScenario(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="PositiveScenario" duration-ms="3765" started-at="2018-07-12T14:00:34Z" data-provider="iterator" finished-at="2018-07-12T14:00:38Z">
+        <test-method status="PASS" signature="PositiveScenario(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="PositiveScenario" duration-ms="3228" started-at="2018-07-12T14:40:14Z" data-provider="iterator" finished-at="2018-07-12T14:40:17Z">
           <params>
             <param index="0">
               <value>
@@ -126,7 +126,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PositiveScenario -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="tearDown" is-config="true" duration-ms="11370" started-at="2018-07-12T14:00:38Z" finished-at="2018-07-12T14:00:50Z">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.tests.DriverClass@4b2bac3f]" name="tearDown" is-config="true" duration-ms="1005" started-at="2018-07-12T14:40:17Z" finished-at="2018-07-12T14:40:18Z">
           <exception class="org.openqa.selenium.remote.SessionNotFoundException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?

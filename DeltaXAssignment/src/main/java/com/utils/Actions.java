@@ -36,10 +36,7 @@ import org.testng.asserts.SoftAssert;
 		
 	}
 	
-	public static boolean IsDisplayed(ObjectLocator locator){
-		
-		return FindElement(locator).isDisplayed();
-	}
+	
 	
 	public static boolean IsVisible(ObjectLocator locator){
 		
@@ -53,11 +50,9 @@ import org.testng.asserts.SoftAssert;
 	public static WebElement FindElement(ObjectLocator locator) {
 			
 			WebElement webElement=null;
-			
-			WaitForWebElement(locator);
-			
+
 			try {
-	             
+				WaitForWebElement(locator);
 				webElement = driver.findElement(locator.Locator);
 			} catch (org.openqa.selenium.NoSuchElementException ex) {
 				// Handle exception if the element is not found		
@@ -81,12 +76,21 @@ import org.testng.asserts.SoftAssert;
 	}
 
 	public static void WaitForWebElement(ObjectLocator locator){
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 		
 		 wait.until(ExpectedConditions.elementToBeClickable(locator.Locator));
 	
 	}
 		
+	public static boolean IsDisplayed(ObjectLocator locator) {
+		try {
+			return FindElement(locator).isDisplayed();
+			
+		}catch(Exception e) {
+			return false;
+		}
+	}
+	
 		
 		public static void  Assertrue(boolean condition, String message){
 			softAssert.assertTrue(condition, message); 

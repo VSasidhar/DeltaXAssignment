@@ -108,16 +108,16 @@ public class RegistrationPage {
 		Actions.EnterText(confirmPassword, "abc");
 		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "confirm_password")).isDisplayed(), "This value is not valid error message displayed for confirm passowrd");
 		Actions.EnterText(confirmPassword, "abc4567654");
-		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "confirm_password")).isDisplayed(), "This value is not valid error message displayed for confirm passowrd");
+		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "confirm_password")), "This value is not valid error message displayed for confirm passowrd");
 	
 		Actions.EnterText(email, "resddy@gmail");
-		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "email")).isDisplayed(), "This value is not valid error message displayed for Email");
+		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "email")), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddy.gmail@com");
-		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "email")).isDisplayed(), "This value is not valid error message displayed for Email");
+		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "email")), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddy.gmail");
-		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "email")).isDisplayed(), "This value is not valid error message displayed for Email");
+		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "email")), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddy@gmail@gmail.com");
-		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "email")).isDisplayed(), "This value is not valid error message displayed for Email");
+		Actions.Assertrue(Actions.IsDisplayed(inValidError.ReplaceLocator("$", "email")), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddygmail@gmail.com");
 	
 	
