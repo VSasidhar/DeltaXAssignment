@@ -2,11 +2,13 @@ package com.tests;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.pages.RegistrationPage;
+import com.utils.Actions;
 import com.utils.ExcelReader;
 import com.utils.WebdriverFactory;
 
@@ -17,16 +19,21 @@ public class DriverClass{
 	@BeforeTest
 	public void testInit(String browserName) throws InterruptedException{
 		driver= WebdriverFactory.intialiseWebDriver(browserName);
-		driver.get("http://adjiva.com/qa-test/");
+		
 	}
 	
 	@DataProvider(name="iterator")
-	public Object[][] GetTestData() throws IOException{
-		return ExcelReader.readExcelData("UserDetails.xlsx", "UserDetails");
+	public Object[][] getTestData() throws IOException{
+		return ExcelReader.readExcelData("RegistrationDetails.xlsx", "Details");
+	}
+	@BeforeMethod
+	public void NaivateToUrl() {
+		
+		driver.navigate().to(Actions.getProperty("url"));
 	}
 	
 	@Test
-	public void TestCase1() {
+	public void NegativeScenarios() {
 		
 		registr.VerifyAllFields();
 		registr.VerifyFieldValidationMessage();
@@ -34,11 +41,11 @@ public class DriverClass{
 		
 	}
 	
-/*//	@Test(dataProvider="iterator")
-	public void PositiveScenario(String firstName, String lastName, String department, String userName, String passowrd, String confirmPassowrd, String email, String phoneNumber){
+	@Test(dataProvider="iterator")
+	public void PositiveScenario(String firstName,String lastName,String department,String userName,String passowrd,String confirmPassowrd,	String email,String phoneNumber){
 		
 		registr.registerUser(firstName, lastName, department, userName, passowrd, confirmPassowrd, email, phoneNumber);
-	}*/
+	}
 	
 	
 

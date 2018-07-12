@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.asserts.SoftAssert;
 
 
@@ -19,10 +20,10 @@ import org.testng.asserts.SoftAssert;
 		
 		
 	 
-	public  String getProperty(String property) {
+	public  static String getProperty(String property) {
 		String value = null;
 		 try {
-			FileReader file=new FileReader("db.properties");
+			FileReader file=new FileReader("build.properties");
 			prop.load(file);
 			value = prop.getProperty(property);
 			
@@ -79,7 +80,7 @@ import org.testng.asserts.SoftAssert;
 	public static void WaitForWebElement(ObjectLocator locator){
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator.Locator));
+		 wait.until(ExpectedConditions.elementToBeClickable(locator.Locator));
 	
 	}
 		
@@ -91,7 +92,8 @@ import org.testng.asserts.SoftAssert;
 		public static void  Assertrue(boolean condition, String message){
 			softAssert.assertTrue(condition, message); 
 		}
-		@AfterSuite
+		
+		@AfterTest
 		
 		public static void tearDown(){
 			softAssert.assertAll();

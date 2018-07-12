@@ -32,6 +32,12 @@ public class RegistrationPage {
 	
 	public static ObjectLocator emptyFiled = new ObjectLocator("Xpath", "//small[normalize-space(.)='$']",
 			" Empty Field validation ");
+	public static ObjectLocator inValidError = new ObjectLocator("Xpath", "//small[@data-bv-validator-for='$' and normalize-space(.)='This value is not valid']", "Not a valid Field ");
+	
+	public static ObjectLocator ThanksNote = new ObjectLocator("Xpath", "//b[normalize-space(.)='Thanks']", " Thanks Note ");
+	
+	
+	
 	
 	public void VerifyAllFields(){
 
@@ -62,59 +68,56 @@ public class RegistrationPage {
 		
 		Actions.EnterText(firstName, "1");
 		
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "first_name")).isDisplayed(), "This value is not valid error message displayed for first name");
 		
 		Actions.EnterText(firstName, "#");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "first_name")).isDisplayed(), "This value is not valid error message displayed for first name");
 		Actions.EnterText(firstName, "sasidhar");
 		
 		Actions.EnterText(lastName, "a");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "Please enter valid Last Name error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "last_name")).isDisplayed(), "Please enter valid Last Name error message displayed for last name ");
 		
 		Actions.EnterText(lastName, "#");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "Please enter valid Last Name error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "last_name")).isDisplayed(), "Please enter valid Last Name error message displayed for last name ");
 		
 		Actions.EnterText(lastName, "1234");
 		
 		
 		Actions.EnterText(usernameName, "abc123");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "user_name")).isDisplayed(), "This value is not valid error message displayed for username ");
 		
 		Actions.EnterText(usernameName, "abc##");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "user_name")).isDisplayed(), "This value is not valid error message displayed  for username ");
 		
 		Actions.EnterText(usernameName, "123");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
-		
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "user_name")).isDisplayed(), "This value is not valid error message displayed  for username ");
+		Actions.EnterText(usernameName, "Vsasidhar123");
 		
 		Actions.EnterText(password, "abc123");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "user_password")).isDisplayed(), "This value is not valid error message displayed  for Password ");
 		Actions.EnterText(password, "123");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "user_password")).isDisplayed(), "This value is not valid error message displayed  for Password ");
 		Actions.EnterText(password, "abc123456");
 		
 		
 		
 		Actions.EnterText(confirmPassword, "abc123");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "confirm_password")).isDisplayed(), "This value is not valid error message displayed for confirm passowrd ");
 		Actions.EnterText(confirmPassword, "34#");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "confirm_password")).isDisplayed(), "This value is not valid error message displayed for confirm passowrd");
 		Actions.EnterText(confirmPassword, "abc");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "confirm_password")).isDisplayed(), "This value is not valid error message displayed for confirm passowrd");
 		Actions.EnterText(confirmPassword, "abc4567654");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
-		Actions.EnterText(confirmPassword, "abc123456");
-		
-		
-		
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "confirm_password")).isDisplayed(), "This value is not valid error message displayed for confirm passowrd");
+	
 		Actions.EnterText(email, "resddy@gmail");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "email")).isDisplayed(), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddy.gmail@com");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "email")).isDisplayed(), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddy.gmail");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "email")).isDisplayed(), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddy@gmail@gmail.com");
-		Actions.Assertrue(Actions.FindElement(emptyFiled.ReplaceLocator("$", "This value is not valid")).isDisplayed(), "This value is not valid error message displayed");
+		Actions.Assertrue(Actions.FindElement(inValidError.ReplaceLocator("$", "email")).isDisplayed(), "This value is not valid error message displayed for Email");
 		Actions.EnterText(email, "resddygmail@gmail.com");
 	
 	
@@ -131,6 +134,7 @@ public class RegistrationPage {
 		Actions.EnterText(email, emailID);
 		Actions.EnterText(phoneNumber, phonenumber);
 		Actions.FindElement(submitButton).click();
+		Actions.Assertrue(Actions.IsDisplayed(ThanksNote), " Thanks Note Dislayed Successfully ");
 	}
 	
 	

@@ -17,15 +17,25 @@
     </plugins>
   </build>
   <dependencies>
-	  <dependency>
-	        <groupId>org.seleniumhq.selenium</groupId>
-	        <artifactId>selenium-java</artifactId>
-	        <version>3.0.0</version>
-	    </dependency> 
+	 <dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.4.01</version>
+		</dependency>
 		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.14</version>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.53.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.17</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.17</version>
 		</dependency>
 
 		<dependency>
@@ -34,19 +44,26 @@
 			<version>3.0.15</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi-ooxml</artifactId>
-		    <version>3.9</version>
-		</dependency>
-		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.9.9</version>
+			<version>6.14.2</version>
 		</dependency>
 		<dependency>
 			<groupId>ant</groupId>
 			<artifactId>ant-apache-log4j</artifactId>
 			<version>1.6.5</version>
 		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+    <groupId>org.apache.xmlbeans</groupId>
+    <artifactId>xmlbeans</artifactId>
+    <version>2.3.0</version>
+</dependency>
+		
+
   </dependencies>
 </project>
