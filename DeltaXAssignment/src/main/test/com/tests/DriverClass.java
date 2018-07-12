@@ -29,7 +29,7 @@ public class DriverClass{
 	@BeforeMethod
 	public void NaivateToUrl() {
 		
-		driver.navigate().to(Actions.getProperty("url"));
+		driver.get(Actions.getProperty("url"));
 	}
 	
 	@Test

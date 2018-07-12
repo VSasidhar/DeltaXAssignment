@@ -145,9 +145,9 @@
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.xpath: //small[@data-bv-validator-for=&apos;confirm_password&apos; and normalize-space(.)=&apos;This value is not valid&apos;]
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;INPCD0244&apos;, ip: &apos;10.24.132.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 1345b0d8-e5d7-454a-9064-13feecabf347
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\XSVUND~1\AppData\Local\Temp\scoped_dir6624_9202}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: c10341c91e3d519aec299f255a9c62e1
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
 	at com.utils.Actions.WaitForWebElement(Actions.java:83)
@@ -186,7 +186,7 @@ Session ID: 1345b0d8-e5d7-454a-9064-13feecabf347
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;parameter name=&quot;browserName&quot; value=&quot;firefox&quot;/&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.tests.DriverClass&quot;/&gt;
@@ -233,16 +233,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'NegativeScenarios')
 data.setCell(0, 2, 'com.tests.DriverClass')
-data.setCell(0, 3, 99698);
+data.setCell(0, 3, 37166);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'PositiveScenario')
 data.setCell(1, 2, 'com.tests.DriverClass')
-data.setCell(1, 3, 14074);
+data.setCell(1, 3, 3362);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -270,26 +270,26 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.DriverClass</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">testInit(firefox)</span>
+                <span class="method-name">testInit(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">NaivateToUrl</span>
-                <span class="method-start">4500 ms</span>
+                <span class="method-start">4294 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">NegativeScenarios</span>
-                <span class="method-start">5088 ms</span>
+                <span class="method-start">4877 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">NaivateToUrl</span>
-                <span class="method-start">105759 ms</span>
+                <span class="method-start">42772 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">PositiveScenario(sasidhar, reddy, Engineering, Vsasidharreddy, Sa12345dhar, Sa12345dhar, sasidharreddy98@gmail.com, 7...)</span>
-                <span class="method-start">126114 ms</span>
+                <span class="method-start">42992 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

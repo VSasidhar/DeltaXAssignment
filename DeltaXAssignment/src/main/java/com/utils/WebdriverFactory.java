@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class WebdriverFactory {
@@ -43,6 +44,16 @@ static ChromeOptions options = new ChromeOptions();
 				driver = new FirefoxDriver();
 				driver.manage().window().maximize();
 				
+				break;
+			case "headless":
+
+				
+			/*	DesiredCapabilities capability = new DesiredCapabilities().htmlUnit();
+				capability.setJavascriptEnabled(true);*/
+				
+				driver = new HtmlUnitDriver();
+				
+
 				break;
 				
 			default:
