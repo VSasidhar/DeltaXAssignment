@@ -1,56 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="2" failed="0" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="46362" started-at="2018-07-12T12:19:10Z" finished-at="2018-07-12T12:19:56Z">
+  <suite name="Suite" duration-ms="2502" started-at="2018-07-12T12:46:02Z" finished-at="2018-07-12T12:46:05Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="46362" started-at="2018-07-12T12:19:10Z" finished-at="2018-07-12T12:19:56Z">
+    <test name="Test" duration-ms="2502" started-at="2018-07-12T12:46:02Z" finished-at="2018-07-12T12:46:05Z">
       <class name="com.tests.DriverClass">
-        <test-method status="PASS" signature="testInit(java.lang.String)[pri:0, instance:com.tests.DriverClass@6950e31]" name="testInit" is-config="true" duration-ms="4282" started-at="2018-07-12T12:19:10Z" finished-at="2018-07-12T12:19:14Z">
+        <test-method status="PASS" signature="testInit(java.lang.String)[pri:0, instance:com.tests.DriverClass@6950e31]" name="testInit" is-config="true" duration-ms="1138" started-at="2018-07-12T12:46:02Z" finished-at="2018-07-12T12:46:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[headless]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInit -->
-        <test-method status="PASS" signature="NaivateToUrl()[pri:0, instance:com.tests.DriverClass@6950e31]" name="NaivateToUrl" is-config="true" duration-ms="583" started-at="2018-07-12T12:19:14Z" finished-at="2018-07-12T12:19:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NaivateToUrl -->
-        <test-method status="FAIL" signature="NegativeScenarios()[pri:0, instance:com.tests.DriverClass@6950e31]" name="NegativeScenarios" duration-ms="37166" started-at="2018-07-12T12:19:15Z" finished-at="2018-07-12T12:19:52Z">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method status="FAIL" signature="NaivateToUrl()[pri:0, instance:com.tests.DriverClass@6950e31]" name="NaivateToUrl" is-config="true" duration-ms="436" started-at="2018-07-12T12:46:03Z" finished-at="2018-07-12T12:46:04Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Timed out after 30 seconds waiting for element to be clickable: By.xpath: //small[@data-bv-validator-for='confirm_password' and normalize-space(.)='This value is not valid']
+              <![CDATA[java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'INPCD0244', ip: '10.24.132.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\XSVUND~1\AppData\Local\Temp\scoped_dir6624_9202}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c10341c91e3d519aec299f255a9c62e1]]>
+Driver info: driver.version: HtmlUnitDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.xpath: //small[@data-bv-validator-for='confirm_password' and normalize-space(.)='This value is not valid']
+              <![CDATA[org.openqa.selenium.WebDriverException: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'INPCD0244', ip: '10.24.132.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\XSVUND~1\AppData\Local\Temp\scoped_dir6624_9202}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c10341c91e3d519aec299f255a9c62e1
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
-at com.utils.Actions.WaitForWebElement(Actions.java:83)
-at com.utils.Actions.FindElement(Actions.java:56)
-at com.pages.RegistrationPage.VerifyErrorFieldValidation(RegistrationPage.java:111)
-at com.tests.DriverClass.NegativeScenarios(DriverClass.java:40)
+Driver info: driver.version: HtmlUnitDriver
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:543)
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:517)
+at com.tests.DriverClass.NaivateToUrl(DriverClass.java:32)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
@@ -70,59 +62,152 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+at org.apache.commons.lang3.Validate.isTrue(Validate.java:155)
+at org.apache.commons.lang3.reflect.FieldUtils.readDeclaredField(FieldUtils.java:512)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.getField(HttpWebConnection.java:1038)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.createConnectionManager(HttpWebConnection.java:961)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.getResponse(HttpWebConnection.java:166)
+at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1357)
+at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1274)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:382)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:451)
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:528)
+... 30 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NegativeScenarios -->
-        <test-method status="PASS" signature="NaivateToUrl()[pri:0, instance:com.tests.DriverClass@6950e31]" name="NaivateToUrl" is-config="true" duration-ms="220" started-at="2018-07-12T12:19:53Z" finished-at="2018-07-12T12:19:53Z">
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NaivateToUrl -->
-        <test-method status="PASS" signature="PositiveScenario(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tests.DriverClass@6950e31]" name="PositiveScenario" duration-ms="3362" started-at="2018-07-12T12:19:53Z" data-provider="iterator" finished-at="2018-07-12T12:19:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sasidhar]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[reddy]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Engineering]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Vsasidharreddy]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Sa12345dhar]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Sa12345dhar]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[sasidharreddy98@gmail.com]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[7034604852]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="NegativeScenarios()[pri:0, instance:com.tests.DriverClass@6950e31]" name="NegativeScenarios" duration-ms="0" started-at="2018-07-12T12:46:04Z" finished-at="2018-07-12T12:46:04Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'INPCD0244', ip: '10.24.132.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: HtmlUnitDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'INPCD0244', ip: '10.24.132.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: HtmlUnitDriver
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:543)
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:517)
+at com.tests.DriverClass.NaivateToUrl(DriverClass.java:32)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+at org.apache.commons.lang3.Validate.isTrue(Validate.java:155)
+at org.apache.commons.lang3.reflect.FieldUtils.readDeclaredField(FieldUtils.java:512)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.getField(HttpWebConnection.java:1038)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.createConnectionManager(HttpWebConnection.java:961)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.getResponse(HttpWebConnection.java:166)
+at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1357)
+at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1274)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:382)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:451)
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:528)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NegativeScenarios -->
+        <test-method status="SKIP" signature="NaivateToUrl()[pri:0, instance:com.tests.DriverClass@6950e31]" name="NaivateToUrl" is-config="true" duration-ms="0" started-at="2018-07-12T12:46:05Z" finished-at="2018-07-12T12:46:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NaivateToUrl -->
+        <test-method status="SKIP" signature="PositiveScenario(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tests.DriverClass@6950e31]" name="PositiveScenario" duration-ms="0" started-at="2018-07-12T12:46:05Z" data-provider="iterator" finished-at="2018-07-12T12:46:05Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'INPCD0244', ip: '10.24.132.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: HtmlUnitDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'INPCD0244', ip: '10.24.132.114', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: HtmlUnitDriver
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:543)
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:517)
+at com.tests.DriverClass.NaivateToUrl(DriverClass.java:32)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+at org.apache.commons.lang3.Validate.isTrue(Validate.java:155)
+at org.apache.commons.lang3.reflect.FieldUtils.readDeclaredField(FieldUtils.java:512)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.getField(HttpWebConnection.java:1038)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.createConnectionManager(HttpWebConnection.java:961)
+at com.gargoylesoftware.htmlunit.HttpWebConnection.getResponse(HttpWebConnection.java:166)
+at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1357)
+at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1274)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:382)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:451)
+at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:528)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PositiveScenario -->

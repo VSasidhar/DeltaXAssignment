@@ -8,13 +8,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class WebdriverFactory {
 	
  static WebDriver driver;
 
 static ChromeOptions options = new ChromeOptions();
+static DesiredCapabilities capabilities = new DesiredCapabilities();
 	public static WebDriver intialiseWebDriver(String browser) {
 		
 			switch (browser.toLowerCase()) {
@@ -27,7 +30,7 @@ static ChromeOptions options = new ChromeOptions();
 				driver.manage().window().maximize();
 
 				break;
-				
+		// Firefox version supported is till 47.0.1		
 			case "firefox":
 
 				FirefoxProfile profile = new FirefoxProfile();
@@ -45,20 +48,12 @@ static ChromeOptions options = new ChromeOptions();
 				driver.manage().window().maximize();
 				
 				break;
-			case "headless":
-
-				
-			/*	DesiredCapabilities capability = new DesiredCapabilities().htmlUnit();
-				capability.setJavascriptEnabled(true);*/
-				
-				driver = new HtmlUnitDriver();
-				
-
-				break;
+		
 				
 			default:
 			
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\Drivers\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\Drivers\\chromedriver.exe");//System.getProperty("user.dir")+"\\src\\main\\resources\\Drivers\\chromedriver.exe");
+				
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				break;

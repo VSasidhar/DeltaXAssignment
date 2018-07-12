@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,35 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.DriverClass" hash-for-method="NegativeScenarios">NegativeScenarios</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.DriverClass" hash-for-method="PositiveScenario(sasidhar, reddy, Engineering, Vsasidharreddy, Sa12345dhar, Sa12345dhar, sasidharreddy98@gmail.com, 7...)">PositiveScenario(sasidhar, reddy, Engineering, Vsasidharreddy, Sa12345dhar, Sa12345dhar, sasidharreddy98@gmail.com, 7...)</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.DriverClass" hash-for-method="PositiveScenario">PositiveScenario</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -131,9 +122,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.tests.DriverClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -142,40 +133,59 @@
                   <a name="NegativeScenarios">
                   </a> <!-- NegativeScenarios -->
                   <span class="method-name">NegativeScenarios</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for element to be clickable: By.xpath: //small[@data-bv-validator-for=&apos;confirm_password&apos; and normalize-space(.)=&apos;This value is not valid&apos;]
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;INPCD0244&apos;, ip: &apos;10.24.132.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\XSVUND~1\AppData\Local\Temp\scoped_dir6624_9202}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c10341c91e3d519aec299f255a9c62e1
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
-	at com.utils.Actions.WaitForWebElement(Actions.java:83)
-	at com.utils.Actions.FindElement(Actions.java:56)
-	at com.pages.RegistrationPage.VerifyErrorFieldValidation(RegistrationPage.java:111)
-	at com.tests.DriverClass.NegativeScenarios(DriverClass.java:40)
-... Removed 25 stack frames
+Driver info: driver.version: HtmlUnitDriver
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:543)
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:517)
+	at com.tests.DriverClass.NaivateToUrl(DriverClass.java:32)
+Caused by: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+	at org.apache.commons.lang3.Validate.isTrue(Validate.java:155)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.getField(HttpWebConnection.java:1038)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.createConnectionManager(HttpWebConnection.java:961)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.getResponse(HttpWebConnection.java:166)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1357)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1274)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:382)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:451)
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:528)
+	... 30 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PositiveScenario">
+                  </a> <!-- PositiveScenario -->
+                  <span class="method-name">PositiveScenario</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;INPCD0244&apos;, ip: &apos;10.24.132.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: HtmlUnitDriver
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:543)
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:517)
+	at com.tests.DriverClass.NaivateToUrl(DriverClass.java:32)
+Caused by: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.http.impl.client.HttpClientBuilder.dnsResolver
+	at org.apache.commons.lang3.Validate.isTrue(Validate.java:155)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.getField(HttpWebConnection.java:1038)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.createConnectionManager(HttpWebConnection.java:961)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.getResponse(HttpWebConnection.java:166)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1357)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1274)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:382)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:451)
+	at org.openqa.selenium.htmlunit.HtmlUnitDriver.get(HtmlUnitDriver.java:528)
+	... 30 more
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.tests.DriverClass</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="PositiveScenario(sasidhar, reddy, Engineering, Vsasidharreddy, Sa12345dhar, Sa12345dhar, sasidharreddy98@gmail.com, 7...)">
-                  </a> <!-- PositiveScenario(sasidhar, reddy, Engineering, Vsasidharreddy, Sa12345dhar, Sa12345dhar, sasidharreddy98@gmail.com, 7...) -->
-                  <span class="method-name">PositiveScenario</span>
-                  <span class="parameters">(sasidhar, reddy, Engineering, Vsasidharreddy, Sa12345dhar, Sa12345dhar, sasidharreddy98@gmail.com, 7034604852)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -186,7 +196,7 @@ Session ID: c10341c91e3d519aec299f255a9c62e1
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;headless&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.tests.DriverClass&quot;/&gt;
@@ -231,18 +241,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'NegativeScenarios')
+data.setCell(0, 1, 'PositiveScenario')
 data.setCell(0, 2, 'com.tests.DriverClass')
-data.setCell(0, 3, 37166);
+data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'PositiveScenario')
+data.setCell(1, 1, 'NegativeScenarios')
 data.setCell(1, 2, 'com.tests.DriverClass')
-data.setCell(1, 3, 3362);
+data.setCell(1, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 40 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -270,26 +280,22 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.DriverClass</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">testInit(chrome)</span>
+                <span class="method-name">testInit(headless)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">NaivateToUrl</span>
-                <span class="method-start">4294 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">NegativeScenarios</span>
-                <span class="method-start">4877 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
                 <span class="method-name">NaivateToUrl</span>
-                <span class="method-start">42772 ms</span>
+                <span class="method-start">1151 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">PositiveScenario(sasidhar, reddy, Engineering, Vsasidharreddy, Sa12345dhar, Sa12345dhar, sasidharreddy98@gmail.com, 7...)</span>
-                <span class="method-start">42992 ms</span>
+                <span class="method-name">NegativeScenarios</span>
+                <span class="method-start">-1531399562841 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PositiveScenario</span>
+                <span class="method-start">-1531399562841 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
